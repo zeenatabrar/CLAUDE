@@ -324,4 +324,43 @@ width: 49%;
     color: #282c3f;
     font-size: 18px;
   }
-  
+  #first{
+    display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 15px;
+  width: 97%;
+  margin: auto;
+  }
+  #first img{
+    width: 100%;
+  }
+  #second{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 15px;
+    width: 97%;
+    margin: auto;
+  }
+  #second img{
+    width: 100%;
+  }
+  #third{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    width: 97%;
+    margin: auto;
+  }
+  #third img{
+    width: 100%;
+  }
+  #fourth{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 15px;
+    width: 97%;
+    margin: auto;
+  }
+  #fourth img{
+    width: 100%;
+  }
