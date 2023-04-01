@@ -232,145 +232,100 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
-#mainkurtaDiv {
-    border: 1px solid transparent;
-    margin-top: 20px;
+#mainDiv {
+    border-top: 1px solid #e0e0e2;
     width: 100%;
+    margin-top: 40px;
+    font-family: "Mukta", sans-serif;
   }
   
-  #filterDiv {
-    border: 1px solid #7d7e92;
-    border-left: 1px solid transparent;
-    width: 18%;
+  #leftDiv {
+    width: 35%;
+    border: 1px solid #e0e0e2;
+    margin: 30px 0 30px 13%;
     display: inline-block;
     vertical-align: top;
   }
+  #rightDiv {
+    width: 25%;
+    border: 1px solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px;
+  }
   
-  #filterHead {
-    font-family: "Mukta", sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    margin: 10px 20px;
-    letter-spacing: 1px;
-  }
-  .filterSub {
-    font-family: "Mukta", sans-serif;
-    margin: 10px 20px;
-  }
-  .filterSub > div {
+  #priceDet {
+    border: 1px solid transparent;
     font-size: 15px;
-  }
-  .subHead {
-    letter-spacing: 1px;
+    color: #282c3f;
+    letter-spacing: 0.5px;
     font-weight: bold;
+  }
+  
+  #titleDiv {
+    border: 1px solid transparent;
+    display: inline-block;
+    width: 70%;
+    margin-top: 10px;
+    vertical-align: top;
+  }
+  #titleDiv > div {
+    border: 1px solid transparent;
     font-size: 16px;
     color: #282c3f;
-    margin-bottom: 10px;
+    letter-spacing: 0.5px;
   }
   
-  #black,
-  #white,
-  #blue,
-  #navy,
-  #grey,
-  #red,
-  #green {
+  #priceDiv {
     border: 1px solid transparent;
-    width: 10px;
-    background-color: black;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  #white {
-    border: 0.1px solid rgb(216, 210, 210);
-    background-color: white;
-  }
-  #blue {
-    background-color: blue;
-  }
-  #navy {
-    background-color: navy;
-  }
-  #grey {
-    background-color: gray;
-  }
-  #red {
-    background-color: red;
-  }
-  #green {
-    background-color: green;
-  }
-  #productDiv {
-    border: 1px solid #7d7e92;
-    width: 80%;
     display: inline-block;
     vertical-align: top;
+    margin-top: 10px;
+    width: 25%;
+    text-align: right;
   }
   
-  #itemDiv {
+  #priceDiv > div {
     border: 1px solid transparent;
-    display: inline-block;
-    width: 20%;
-    /* height: 405px; */
-    vertical-align: top;
-    margin: 18px 25px;
-    font-family: "Mukta", sans-serif;
-    overflow: hidden;
-  }
-  
-  #fDiv {
-    width: 100%;
-    border: 1px solid transparent;
-  }
-  #fDiv > img {
-    width: 100%;
-  }
-  #sDiv {
-    width: 100%;
-    border: 1px solid transparent;
-  }
-  
-  #itemName {
-    font-weight: bold;
-    margin: 0 10px;
-  }
-  #itemSubName {
-    margin: 0 10px;
-    font-size: 14px;
-    border: 1px solid transparent;
-  }
-  #itemDisPrice {
-    margin: 0 10px;
     font-size: 16px;
     font-weight: bold;
-    border: 1px solid transparent;
-    display: inline-block;
-  }
-  #itemOrigPrice {
-    margin: 0 5px;
-    font-size: 15px;
-    color: #3f4046;
-    border: 1px solid transparent;
-    display: inline-block;
-  }
-  #itemOff {
-    margin: 0 5px;
-    font-size: 15px;
-    color: #3f4046;
-    border: 1px solid transparent;
-    display: inline-block;
-    color: #ff905a;
+    color: #282c3f;
+    letter-spacing: 1.2px;
   }
   
-  #itemRat {
-    margin: -40px 0 18px 10px;
-    position: relative;
-    width: 15%;
+  #line {
+    border-top: 1px solid #e0e0e2;
+    margin: 8px 0;
+  }
+  
+  #summery {
+    border-radius: 2px;
+    background-color: #ff3e6c;
+    color: white;
+    display: inline-block;
+    padding: 8px 0;
+    width: 95%;
+    text-align: center;
+    margin: 15px;
+    font-weight: bold;
     font-size: 14px;
-    background-color: hsla(0, 0%, 100%, 0.8);
-    padding: 0 5px;
-    border: 1px solid transparent;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  
+  #title {
+    font-weight: bold;
+    color: #282c3f;
+    margin: 15px;
+  }
+  
+  #leftDiv > input {
+    width: 89%;
+    margin: 10px 15px;
+    padding: 12px;
+    color: #282c3f;
+    border: 2px solid #e0e0e2;
+    border-radius: 5px;
+    outline: none;
   }
   

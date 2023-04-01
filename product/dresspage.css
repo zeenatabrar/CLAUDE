@@ -323,7 +323,7 @@ body {
     border: 1px solid transparent;
     display: inline-block;
     width: 20%;
-    height: 405px;
+    /* height: 405px; */
     vertical-align: top;
     margin: 18px 25px;
     font-family: "Mukta", sans-serif;

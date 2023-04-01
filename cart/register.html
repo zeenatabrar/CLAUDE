@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="password.css">
+    <link rel="stylesheet" href="register.css">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <title>Myntra</title>
 </head>
+
 <body>
     <div id="navigation">
         <div id="left">
@@ -574,57 +576,77 @@
             </div>
         </div>
     </div>
-    <div id="password">
-        <div id="passText">Enter Account Password</div>
-        <div id="passTxt">For additional security, please enter your account password</div>
-        <div id="passInp">
-            <input type="text" id="pass" placeholder="Password*">
+    <div id="create">
+        <div id="createText">Complete your Sign up</div>
+        <div id="createTxt">Mobile Number</div>
+        <div>
+            <span id="createNum">9428144924</span>
+            <span id="right"><i class="lni lni-checkmark-circle"></i></span>
         </div>
-        <div id="passBtn" onclick="loginData()">LOGIN</div>
-        <div id="passTxt">Have trouble logging in? <span>Get Help</span></div>
-        <div id="createBtn" onclick="createAcc()">CREATE NEW ACCOUNT</div>
+
+        <div class="createInp">
+            <input type="text" id="password" placeholder="Create Password*">
+        </div>
+        <div class="createInp">
+            <input type="text" id="name" placeholder="Full Name">
+        </div>
+        <div class="createInp">
+            <input type="text" id="email" placeholder="Email">
+        </div>
+        <div id="createOpt">
+            Select Gender:
+            <input type="radio" name="gender" checked> Female
+            <input type="radio" name="gender"> male
+        </div>
+        <div id="createBtn" onclick="createAccDea()">CREATE ACCOUNT</div>
+        <div id="createTxt">Already have Account? <span onclick="loginPage()">Log In</span></div>
     </div>
 </body>
+
 </html>
 <script>
-      let customerData = JSON.parse(localStorage.getItem("myntraUser")) || [];
-    let regNumLocal = JSON.parse(localStorage.getItem("regNum")); 
+    let regNumLocal = JSON.parse(localStorage.getItem("regNum"));
 
-    function loginData(){
-        let pass = document.getElementById("pass").value;
-        let count = 0;
+    let createNum = document.getElementById("createNum");
+    createNum.innerHTML = regNumLocal.number;
 
-        for(var i = 0; i < customerData.length; i++){
-            if(pass == customerData[i].userPass && regNumLocal.number == customerData[i].userNumber){
-                alert("Login Successfull");
-                window.location.href = "../index.html";
-            }else{
-                count++;
-                console.log('count:', count)
-            }
+    let customerData = JSON.parse(localStorage.getItem("myntraUser")) || [];
+
+    function createAccDea() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        var userData = {
+            userName: name,
+            userEmail: email,
+            userPass: password,
+            userNumber: regNumLocal.number
         }
-        if(count == customerData.length){
-            alert("Please Create Account");
-        }
 
+        console.log(userData);
+        setData(userData);
+
+        window.location.href = "password.html";
     }
 
-    function createAcc(){
-        window.location.href = "register.html"
+    function setData(data) {
+        customerData.push(data);
+        localStorage.setItem("myntraUser", JSON.stringify(customerData));
     }
-    function logInPage(){
-        window.location.href = "login.html";
+    function logInPage() {
+        window.location.href = "login.html"
     }
-    function cartPage(){
+    function cartPage() {
         window.location.href = "../payment/cartPage.html";
     }
-    function dresspage(){
+    function dresspage() {
         window.location.href = "../product/dresspage.html";
     }
-    function kurtapage(){
+    function kurtapage() {
         window.location.href = "../product/kurtapage.html";
     }
-    function HomePage(){
+    function HomePage() {
         window.location.href = "../index.html";
     }
 </script>

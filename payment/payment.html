@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="password.css">
+    <link rel="stylesheet" href="payment.css">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
-    <title>Myntra</title>
+    <title>Document</title>
 </head>
 <body>
     <div id="navigation">
@@ -574,49 +574,67 @@
             </div>
         </div>
     </div>
-    <div id="password">
-        <div id="passText">Enter Account Password</div>
-        <div id="passTxt">For additional security, please enter your account password</div>
-        <div id="passInp">
-            <input type="text" id="pass" placeholder="Password*">
+    <div id="mainDiv">
+        <div id="leftDiv">
+            <div id="title">CREDIT/DEBIT CARD</div>
+            <input type="text" placeholder="Card Number" maxlength="16">
+            <input type="text" placeholder="Name on card">
+            <input type="text" style="width: 54%;" placeholder="Valid Thru (MM/YY)">
+            <input type="password" style="width: 25%; margin: 10px 0;" placeholder="CVV" maxlength="3">
+            <div id="payNow" onclick="payNow()">PAY NOW</div>
         </div>
-        <div id="passBtn" onclick="loginData()">LOGIN</div>
-        <div id="passTxt">Have trouble logging in? <span>Get Help</span></div>
-        <div id="createBtn" onclick="createAcc()">CREATE NEW ACCOUNT</div>
+        <div id="rightDiv">
+            <div id="priceDet">PRICE DETAILS</div>
+            <div id="titleDiv">
+                <div>Total MRP</div>
+                <div>Discount on MRP</div>
+                <div>Convenience Free</div>
+            </div>
+            <div id="priceDiv">
+                <div id="origPrice">2348</div>
+                <div id="disPrice" style="color: #0db7af;">957</div>
+                <div>₹ 99</div>
+            </div>
+            <div id="line"></div>
+            <div id="titleDiv">
+                <div style="font-weight: bold;">Total Amount</div>
+            </div>
+            <div id="priceDiv">
+                <div id="totalPrice">2348</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
 <script>
-      let customerData = JSON.parse(localStorage.getItem("myntraUser")) || [];
-    let regNumLocal = JSON.parse(localStorage.getItem("regNum")); 
+     let productsItem = JSON.parse(localStorage.getItem("cartItem")) || [];
+    console.log('productsItem:', productsItem);
 
-    function loginData(){
-        let pass = document.getElementById("pass").value;
-        let count = 0;
+    let origPrice = document.getElementById("origPrice");
+    let disPrice = document.getElementById("disPrice");
+    let totalPrice = document.getElementById("totalPrice");
 
-        for(var i = 0; i < customerData.length; i++){
-            if(pass == customerData[i].userPass && regNumLocal.number == customerData[i].userNumber){
-                alert("Login Successfull");
-                window.location.href = "../index.html";
-            }else{
-                count++;
-                console.log('count:', count)
-            }
-        }
-        if(count == customerData.length){
-            alert("Please Create Account");
-        }
+    var origPriceTotal = productsItem.reduce(function (acc, cv) {
+        return acc + Number(cv.OrigPrice);
+    }, 0);
 
-    }
 
-    function createAcc(){
-        window.location.href = "register.html"
+    var totalPriceTotal = productsItem.reduce(function (acc, cv) {
+        return acc + Number(cv.DisPrice);
+    }, 0);
+
+    origPrice.innerText = "₹ " + origPriceTotal;
+    totalPrice.innerText = "₹ " + (totalPriceTotal + 99);
+    disPrice.innerText = "- ₹ " + (origPriceTotal - totalPriceTotal);
+
+    function payNow(){
+        window.location.href = "thankYou.html";
     }
     function logInPage(){
-        window.location.href = "login.html";
+        window.location.href = "../cart/login.html";
     }
     function cartPage(){
-        window.location.href = "../payment/cartPage.html";
+        window.location.href = "cartpage.html";
     }
     function dresspage(){
         window.location.href = "../product/dresspage.html";

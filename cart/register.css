@@ -232,145 +232,84 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
-#mainkurtaDiv {
-    border: 1px solid transparent;
-    margin-top: 20px;
-    width: 100%;
-  }
-  
-  #filterDiv {
-    border: 1px solid #7d7e92;
-    border-left: 1px solid transparent;
-    width: 18%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  #filterHead {
+#create {
+    width: 30%;
+    height: 500px;
+    margin: auto;
     font-family: "Mukta", sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-    margin: 10px 20px;
-    letter-spacing: 1px;
-  }
-  .filterSub {
-    font-family: "Mukta", sans-serif;
-    margin: 10px 20px;
-  }
-  .filterSub > div {
-    font-size: 15px;
-  }
-  .subHead {
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-size: 16px;
-    color: #282c3f;
-    margin-bottom: 10px;
-  }
-  
-  #black,
-  #white,
-  #blue,
-  #navy,
-  #grey,
-  #red,
-  #green {
-    border: 1px solid transparent;
-    width: 10px;
-    background-color: black;
-    height: 10px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  #white {
-    border: 0.1px solid rgb(216, 210, 210);
+    margin-top: 110px;
     background-color: white;
-  }
-  #blue {
-    background-color: blue;
-  }
-  #navy {
-    background-color: navy;
-  }
-  #grey {
-    background-color: gray;
-  }
-  #red {
-    background-color: red;
-  }
-  #green {
-    background-color: green;
-  }
-  #productDiv {
-    border: 1px solid #7d7e92;
-    width: 80%;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  #itemDiv {
     border: 1px solid transparent;
-    display: inline-block;
-    width: 20%;
-    /* height: 405px; */
-    vertical-align: top;
-    margin: 18px 25px;
+  }
+  #createText {
+    margin: 30px 0 20px 35px;
+    font-weight: bold;
+    font-size: 23px;
+    color: #282c3f;
+  }
+  #createTxt {
+    margin: 10px 35px 0 35px;
+    color: #7d7e92;
+    font-size: 12px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #createTxt > span {
+    color: #ff3c6f;
     font-family: "Mukta", sans-serif;
-    overflow: hidden;
+    cursor: pointer;
   }
-  
-  #fDiv {
-    width: 100%;
-    border: 1px solid transparent;
+  #createNum {
+    margin: 0px 35px;
+    color: #7d7e92;
+    font-size: 17px;
+    letter-spacing: 0.5px;
   }
-  #fDiv > img {
-    width: 100%;
-  }
-  #sDiv {
-    width: 100%;
-    border: 1px solid transparent;
-  }
-  
-  #itemName {
-    font-weight: bold;
-    margin: 0 10px;
-  }
-  #itemSubName {
-    margin: 0 10px;
-    font-size: 14px;
-    border: 1px solid transparent;
-  }
-  #itemDisPrice {
-    margin: 0 10px;
-    font-size: 16px;
-    font-weight: bold;
-    border: 1px solid transparent;
-    display: inline-block;
-  }
-  #itemOrigPrice {
-    margin: 0 5px;
-    font-size: 15px;
-    color: #3f4046;
-    border: 1px solid transparent;
-    display: inline-block;
-  }
-  #itemOff {
-    margin: 0 5px;
-    font-size: 15px;
-    color: #3f4046;
-    border: 1px solid transparent;
-    display: inline-block;
-    color: #ff905a;
-  }
-  
-  #itemRat {
-    margin: -40px 0 18px 10px;
+  #right {
     position: relative;
-    width: 15%;
-    font-size: 14px;
-    background-color: hsla(0, 0%, 100%, 0.8);
-    padding: 0 5px;
-    border: 1px solid transparent;
+    float: right;
+    margin-right: 40px;
+    margin-top: -5px;
+    color: #00a482;
+  }
+  #createOpt {
+    margin: 0px 35px;
+    color: #7d7e92;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #createOpt > input {
+    margin-left: 30px;
+    cursor: pointer;
+  }
+  .createInp {
+    margin: 25px 35px;
+  }
+  .createInp > input {
+    border: 1px solid #7d7e92;
+    outline: none;
+    width: 93.5%;
+    font-size: 12px;
+    padding: 10px;
+    color: #7d7e92;
+    height: 18px;
+  }
+  .createInp > input:focus {
+    border: 1px solid black;
+    color: #282c3f;
+    font-family: "Mukta", sans-serif;
+  }
+  .createInp > input::placeholder {
+    font-family: "Mukta", sans-serif;
+  }
+  #createBtn {
+    background-color: #ff3f6c;
+    margin: 25px 35px;
+    color: #fff;
+    text-align: center;
+    padding: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
   }
   
