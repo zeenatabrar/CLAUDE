@@ -1,0 +1,335 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap");
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#navigation {
+    position: sticky;
+    top: 0;
+    left: 0;
+    border: 1px solid transparent;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    font-family: "Mukta", sans-serif;
+    font-size: 16px;
+    color: #282c3f;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#navigation>div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left {
+    width: 49%;
+}
+
+#left>div {
+    display: inline-block;
+    margin: 28px 14px;
+    padding-bottom: 23px;
+    vertical-align: top;
+}
+
+#search {
+    border: 1px solid #e0e0e2;
+    width: 27%;
+    height: 48%;
+    margin-top: 19px;
+    margin-left: 80px;
+    background-color: #f5f5f6;
+}
+
+#search>i {
+    font-size: 18px;
+    margin: 10px;
+    color: #7d7e92;
+}
+
+#srch {
+    vertical-align: top;
+    width: 84%;
+    height: 95%;
+    border: none;
+    background-color: transparent;
+    font-family: "Mukta", sans-serif;
+    outline: none;
+    color: #7d7e92;
+}
+
+#rightMenu {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 12%;
+    height: 45%;
+}
+
+#rightMenu>div {
+    width: 25%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+#rightMenu i {
+    font-size: 18px;
+    margin: 0 9px 0 9px;
+    color: #7d7e92;
+}
+
+#rightMenu>div div {
+    font-size: 12px;
+    margin-top: -7px;
+}
+
+#men,
+#women,
+#kids,
+#home,
+#beauty {
+    /* border: 1px solid red; */
+    background-color: #fff;
+    width: 85%;
+    position: absolute;
+    top: 81px;
+    left: 120px;
+    visibility: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+#men>div,
+#women>div,
+#kids>div,
+#home>div,
+#beauty>div {
+    display: inline-block;
+    vertical-align: top;
+    width: 15%;
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+#menbox:hover #men,
+#womenbox:hover #women,
+#kidbox:hover #kids,
+#homebox:hover #home,
+#beautybox:hover #beauty,
+#studiobox:hover #studio {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.15s;
+}
+
+.boxes {
+    border-bottom: 1px solid #e0e0e2;
+    margin: 20px 0;
+    padding-bottom: 12px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+}
+
+.boxes>div {
+    line-height: 25px;
+}
+
+.boxes>div:hover {
+    color: black;
+    font-weight: 600;
+}
+
+.heading {
+    color: #ee5f73;
+    font-weight: bold;
+    font-family: "Mukta", sans-serif;
+    font-size: 15.5px;
+}
+
+#women .heading {
+    color: #fb56c1;
+}
+
+#kids .heading {
+    color: #f26a10;
+}
+
+#home .heading {
+    color: #f2c210;
+}
+
+#beauty .heading {
+    color: #0db7af;
+}
+
+#menbox:hover {
+    border-bottom: 3px solid #ee5f73;
+}
+
+#womenbox:hover {
+    border-bottom: 3px solid #fb56c1;
+}
+
+#kidbox:hover {
+    border-bottom: 3px solid #f26a10;
+}
+
+#homebox:hover {
+    border-bottom: 3px solid #f2c210;
+}
+
+#beautybox:hover {
+    border-bottom: 3px solid #0db7af;
+}
+
+#studiobox:hover {
+    border-bottom: 3px solid #ff3f6c;
+}
+
+#studio {
+    background-color: #fff;
+    width: 39%;
+    position: absolute;
+    top: 81px;
+    left: 360px;
+    visibility: hidden;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#stdLogo {
+    width: 20%;
+    margin: auto;
+    height: 35px;
+    padding: 15px;
+}
+
+#stdM {
+    text-align: center;
+}
+
+#stdBtn {
+    font-size: 17px;
+    border: 1px solid #7d7e92;
+    width: 30%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 5px 30px;
+    padding-right: 10px;
+}
+
+#stdBtn>i {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+
+#mainDiv {
+    border-top: 1px solid #e0e0e2;
+    width: 100%;
+    margin-top: 40px;
+    font-family: "Mukta", sans-serif;
+  }
+  
+  #leftDiv {
+    width: 35%;
+    border: 1px solid #e0e0e2;
+    margin: 30px 0 30px 13%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  #rightDiv {
+    width: 25%;
+    border: 1px solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    margin: 30px;
+  }
+  
+  #priceDet {
+    border: 1px solid transparent;
+    font-size: 15px;
+    color: #282c3f;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  
+  #titleDiv {
+    border: 1px solid transparent;
+    display: inline-block;
+    width: 70%;
+    margin-top: 10px;
+    vertical-align: top;
+  }
+  #titleDiv > div {
+    border: 1px solid transparent;
+    font-size: 16px;
+    color: #282c3f;
+    letter-spacing: 0.5px;
+  }
+  
+  #priceDiv {
+    border: 1px solid transparent;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    width: 25%;
+    text-align: right;
+  }
+  
+  #priceDiv > div {
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-weight: bold;
+    color: #282c3f;
+    letter-spacing: 1.2px;
+  }
+  
+  #line {
+    border-top: 1px solid #e0e0e2;
+    margin: 8px 0;
+  }
+  
+  #payNow {
+    border-radius: 2px;
+    background-color: #ff3e6c;
+    color: white;
+    display: inline-block;
+    padding: 8px 0;
+    width: 95%;
+    text-align: center;
+    margin: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  
+  #title {
+    font-weight: bold;
+    color: #282c3f;
+    margin: 15px;
+  }
+  
+  #leftDiv > input {
+    width: 89%;
+    margin: 10px 15px;
+    padding: 12px;
+    color: #282c3f;
+    border: 2px solid #e0e0e2;
+    border-radius: 5px;
+    outline: none;
+  }
+  
